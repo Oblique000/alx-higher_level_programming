@@ -19,8 +19,10 @@ if __name__ == "__main__":
     elif operator == '*':
         total = mul(a, b)
     elif operator == '/':
+        if b == 0:
+            print("Error: Division by zero is not allowed.")
         total = div(a, b)
     else:
         print("Unknown operator. Available operators: +, -, * and /")
         sys.exit(1)
-        print("{} {} {} = {}".format(a, operator, b, total))
+    print("{} {} {} = {}".format(a, operator, b, total))
