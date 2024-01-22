@@ -5,4 +5,4 @@ c = a
 a = b
 b = a
 c, a, b = a, b, a
-print("a={:} - b={:d}".format(a, b))
+print("a={:d} -i b={:d}".format(a, b))
