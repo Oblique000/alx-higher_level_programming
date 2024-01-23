@@ -1,29 +1,29 @@
 #!/usr/bin/python3
+"""4-square.py"""
+
 
 class Square:
     """The class Square defines a square."""
-
     def __init__(self, size=0):
-        """Initialize the Square instance.
+        """The __init__ is a special method.
 
         Args:
-            size (int): The size of the square (default is 0).
+            size (int): this is a private instance attribute.
         """
-        self.__size = 0
-        self.size = size
+        self.__size = size
 
     @property
     def size(self):
-        """Get the size of the square."""
+        """This is the getter property used to retrieve size.
+
+        Args:
+            value (int): the variable in the setter property the holds the new
+            size value.
+        """
         return self.__size
 
     @size.setter
     def size(self, value):
-        """Set the size of the square.
-
-        Args:
-            value (int): The new size value.
-        """
         if not isinstance(value, int):
             raise TypeError("size must be an integer")
         if value < 0:
@@ -31,5 +31,10 @@ class Square:
         self.__size = value
 
     def area(self):
-        """Calculate the area of the square."""
-        return self.__size ** 2
+        """This calculates the area of the Square.
+
+        Args:
+            cal (int): calculates area of a square.
+        """
+        cal = self.__size * self.__size
+        return cal
