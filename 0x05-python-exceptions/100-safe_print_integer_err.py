@@ -4,7 +4,7 @@ import sys
 
 def safe_print_integer_err(value):
     try:
-        print("{:d}".format(value))
+        print(f"{int(value)}")
         return (True)
     except (TypeError, ValueError) as e:
         print(f"Exception: {e}", file=sys.stderr)
