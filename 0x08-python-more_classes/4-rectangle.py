@@ -72,10 +72,10 @@ class Rectangle:
             return ""
         else:
             result = ""
-            for x in range(self.__height):
+            for i in range(self.__height):
                 result = result + "#" * self.__width
 
-                if x < self.__height - 1:
+                if i < self.__height - 1:
                     result += "\n"
 
             return result
@@ -85,4 +85,3 @@ class Rectangle:
         to be able to recreate a new instance by using eval()
         """
         return f'Rectangle({self.__width}, {self.__height})'
-
