@@ -11,13 +11,11 @@ def text_indentation(text):
     each of these characters: ., ? and :.
 
     Args:
-        character(list) : containing the characters.
-        count(int): keeps track of the number of loops
-        lines(list): list containing the splitted string
+        text (str): Input text.
 
     Raises:
-        TypeError: text must be a string
-        ValueError: input must not be an empty string
+        TypeError: If text is not a string.
+        ValueError: If input is an empty string.
     """
     if type(text) is not str or text is None:
         raise TypeError("text must be a string")
@@ -27,7 +25,7 @@ def text_indentation(text):
     characters = ['.', '?', ':']
 
     for char in characters:
-        text = text.replace(char + ' ', char + '\n')
+        text = text.replace(char, char + '\n')
 
     lines = text.split('\n')
 
