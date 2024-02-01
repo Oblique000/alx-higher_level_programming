@@ -11,8 +11,8 @@ def text_indentation(text):
     each of these characters: ., ? and :.
 
     Args:
-        char(list) : containing the characters.
-        x(int): keeps track of the number of loops
+        character(list) : containing the characters.
+        count(int): keeps track of the number of loops
         lines(list): list containing the splitted string
 
     Raises:
@@ -24,19 +24,19 @@ def text_indentation(text):
     if not text.strip():
         raise ValueError("input must not be an empty string")
 
-    char_list = ['.', '?', ':']
+    characters = ['.', '?', ':']
 
-    for char in char_list:
+    for char in characters:
         text = text.replace(char + ' ', char + '\n')
 
     lines = text.split('\n')
 
-    x = 0
+    count = 0
 
     for line in lines:
         stripped_line = line.strip()
-        x += 1
-        if stripped_line and x < len(lines):
+        count += 1
+        if stripped_line and count < len(lines):
             print(stripped_line)
             print()
         else:
