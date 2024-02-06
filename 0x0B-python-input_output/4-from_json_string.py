@@ -1,6 +1,8 @@
 #!/usr/bin/python3
 """4-from_json_string module"""
 import json
+"""import json module"""
+
 
 def from_json_string(my_str):
     """Returns an object (Python data structure) represented
