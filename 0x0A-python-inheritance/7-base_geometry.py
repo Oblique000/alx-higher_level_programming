@@ -22,16 +22,19 @@ class BaseGeometry:
             TypeError: "{} must be an integer".format(name)"
             VlaueError: "{} must be greater than 0".format(name)"
         """
-        if not isinstance(name, str):
+        if type(name) is not str:
             raise TypeError("name must be a string")
 
-        if not name or not isinstance(name, str):
+        if name is None or name is bool:
+            raise TypeError("name must be a string")
+
+        if len(name) == 0:
             raise TypeError("name must not be an empty string")
 
-        if not isinstance(value, int):
+        if type(value) is not int:
             raise TypeError("{} must be an integer".format(name))
 
-        if not isinstance(value, int):
+        if value is None or value is bool:
             raise TypeError("{} must be an integer".format(name))
 
         if value <= 0:
